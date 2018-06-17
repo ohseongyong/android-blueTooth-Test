@@ -55,7 +55,7 @@ class WebViewControlActivity : AppCompatActivity() {
 
         //myWebView.addJavascriptInterface(WebViewJsInterface(myWebView), "handler");
         myWebView.addJavascriptInterface(WebAppInterface(this), "Android")
-        myWebView.loadUrl("http://106.10.42.35:3000/")
+        myWebView.loadUrl("http://106.10.~.~/")
 
         /** 최초 전달  */
         //myWebView.post { myWebView.loadUrl("javascript:_index._init('0.001')") }
