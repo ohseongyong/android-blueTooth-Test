@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f2558430-0c44-420e-b77b-268a9a7b2a5d" name="106.10.42.35_micro" url="http://106.10.42.35">
+        <fileTransfer host="106.10.42.35" port="21" rootFolder="/home/predict/test_proj">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

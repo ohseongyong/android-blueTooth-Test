@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 부트스트랩 -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!--link href="./stylesheets/navbar-fixed-top.css" rel="stylesheet"-->
+
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h3>Interaction home Labs.</h3>
+
+    <h3>Android BlueTooth Test </h3>
+
+    <!--<div class="form-group">-->
+        <!--<input type="text" class="form-control" id="tInputKey" placeholder="키값">-->
+        <!--<button class="btn btn-default" onclick="sendFn()">전송</button>-->
+    <!--</div>-->
+    <div class="form-inline">
+        <div class="form-group">
+            <input type="text" class="form-control" id="tInputKey" placeholder="키값">
+        </div>
+        <button class="btn btn-default" onclick="sendFn()">전송</button>
+    </div>
+
+    <div class="form-inline">
+        <button class="btn btn-default" onclick="disconnectFn()">접속해제</button>
+    </div>
+
+    <div class="form-inline">
+        <label>* a/d : 초록불 on/off</label></br>
+        <label>* b/e : 노란불 on/off</label></br>
+        <label>* c/f : 빨간불 on/off</label></br>
+    </div>
+
+</div>
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="js/index.js"></script>
+<script src="js/_interface_js_native.js"></script>
+
+
+<script>
+
+    $(function(){
+
+        index._init();
+
+    });
+
+    function sendFn()
+    {
+        var tString = $('#tInputKey').val();
+        _interface_js_native.showAndroidToast(tString);
+    }
+
+    // 연결해제~
+    function disconnectFn() {
+        _interface_js_native.disconnected();
+    }
+
+</script>
+
+</body>
+</html>
